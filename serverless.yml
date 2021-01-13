@@ -24,9 +24,9 @@ provider:
   #  SAMPLE_ENV_VAR: ${env:SAMPLE_ENV_VAR}
 
 functions:
-  hello:
-    handler: handler.hello
+  pdf-base64:
+    handler: src/index.handler
     events:
       - http:
-          path: hello
+          path: pdf-base64
           method: get
