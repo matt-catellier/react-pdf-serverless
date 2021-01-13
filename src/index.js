@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactPDF from '@react-pdf/renderer'
 
-import streamToBuffer from './utils/streamToBuffer';
+import streamToBuffer from './streamToBuffer';
 
 import MyDocument from './MyDocument'
 

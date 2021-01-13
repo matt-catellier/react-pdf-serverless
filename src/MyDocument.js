@@ -1,7 +1,7 @@
 import React from 'react';
 import { Page, Text, View, Document, StyleSheet, Font } from '@react-pdf/renderer';
 
-Font.register({ family: 'Anton',  src: './fonts/Anton/Anton-Regular.ttf' })
+Font.register({ family: 'Anton',  src: './src/Anton-Regular.ttf' })
 
 // Create styles
 const styles = StyleSheet.create({

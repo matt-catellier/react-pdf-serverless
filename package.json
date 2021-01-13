@@ -4,6 +4,7 @@
   "description": "A Node.js starter for Serverless Framework with ES6 and TypeScript support",
   "main": "handler.js",
   "scripts": {
+    "dev": "serverless offline start --port=3002",
     "test": "serverless-bundle test"
   },
   "author": "",
