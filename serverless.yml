@@ -30,9 +30,10 @@ functions:
       - http:
           path: pdf-base64
           method: get
+          cors: true
 
 custom:
-  bundle:
+  bundle: 
     copyFiles:                   # Copy any additional files to the generated package
     - from: 'src/*'              # Where the files are currently
       to: './' 
