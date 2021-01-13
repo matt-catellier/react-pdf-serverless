@@ -1,6 +1,5 @@
 import React from 'react';
-import { Page, Text, View, Document, StyleSheet, Font, Image } from '@react-pdf/renderer';
-import logo from './assets/logo.png'
+import { Page, Text, View, Document, StyleSheet, Font } from '@react-pdf/renderer';
 
 Font.register({ family: 'Anton',  src: './fonts/Anton/Anton-Regular.ttf' })
 
@@ -46,6 +45,7 @@ function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
+// eslint-disable-next-line react/prop-types
 const Item = ({name, description, value, units, total, currency }) => {
   return (
     <View style={{padding: 10, borderBottom: '1 solid black'}}>
