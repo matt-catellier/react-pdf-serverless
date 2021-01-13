@@ -86,7 +86,6 @@ const MyDocument = () => (
       </View>
       <View style={styles.footer}>
         <Text>Create on test</Text>
-        <Image src={logo} style={{width: 200}} />
       </View>
     </Page>
   </Document>
