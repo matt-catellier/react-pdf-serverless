@@ -1,5 +1,5 @@
 # NOTE: update this with your service name
-service: serverless-nodejs-starter
+service: react-pdf-lambda
 
 # Create an optimized package for our functions 
 package:
@@ -9,6 +9,7 @@ plugins:
   - serverless-bundle # Package our functions with Webpack
   - serverless-offline
   - serverless-dotenv-plugin # Load .env as environment variables
+  - serverless-cors
 
 provider:
   name: aws
@@ -28,12 +29,23 @@ functions:
     handler: src/index.handler
     events:
       - http:
-          path: pdf-base64
+          path: /pdf-base64
           method: get
-          cors: true
+          cors:
+            origins:
+              - http://example.com
+              - http://example2.com
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+            allowCredentials: false
 
 custom:
   bundle: 
     copyFiles:                   # Copy any additional files to the generated package
     - from: 'src/*'              # Where the files are currently
-      to: './' 
+      to: './'
